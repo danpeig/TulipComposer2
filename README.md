@@ -2,16 +2,6 @@
 
 Tulip Composer is a free online software for generating roadbook Tulips.
 
-<img src="images/tulip-001.svg" style="width: 80px;" />
-<img src="images/tulip-002.svg" style="width: 80px;" />
-<img src="images/tulip-003.svg" style="width: 80px;" />
-<img src="images/tulip-004.svg" style="width: 80px;" />
-<img src="images/tulip-005.svg" style="width: 80px;" />
-<img src="images/tulip-006.svg" style="width: 80px;" />
-<img src="images/tulip-007.svg" style="width: 80px;" />
-<img src="images/tulip-008.svg" style="width: 80px;" />
-<img src="images/tulip-009.svg" style="width: 80px;" />
-
 ## Online version
 
 The official webpage with a working online version is https://www.danbp.org/tulipcomposer/
