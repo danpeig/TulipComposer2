@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="SVGCanvas" class="SVGCanvas" width="300px" height="300px"><g id="Frame1"><svg viewBox="0 0 200.71 200.71" label="Frame" id="Frame"><title>Frame</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="Layer_77" data-name="Layer 77" style="display:inline" inkscape:label="Frame">
+    <rect class="cls-5" x="1.8766327" y="1.8766327" width="196.95674" height="196.95674" id="rect713" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"/>
+  </g></svg></g><g id="Segment_45_Half2" transform="scale(1, -1) translate(0, -300)"><svg viewBox="0 0 200.71 200.71" label="Segment 45 Half" id="Segment_45_Half"><title>Segment 45 Half</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="layer15" inkscape:label="Segment 45 Half" style="display:inline">
+    <path style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 100.35,100.85 81.14,-81.5" id="path1832" inkscape:connector-curvature="0"/>
+  </g></svg></g><g id="Start_Right_Bottom3"><svg viewBox="0 0 200.71 200.71" label="Start Right Bottom" id="Start_Right_Bottom"><title>Start Right Bottom</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="Layer_11_copy" data-name="Layer 11 copy" style="display:inline" inkscape:label="Start Right Bottom">
+    <path class="cls-3" d="m 191.58,185.5 a 6.25,6.25 0 1 1 -6.25,-6.25 6.25,6.25 0 0 1 6.25,6.25 z" transform="translate(0.35,0.35)" id="path145" inkscape:connector-curvature="0" style="fill:none;stroke:#000000;stroke-width:7px;stroke-linecap:round"/>
+  </g></svg></g><g id="Segment_45_Big4"><svg viewBox="0 0 200.71 200.71" label="Segment 45 Big" id="Segment_45_Big"><title>Segment 45 Big</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="layer16" inkscape:label="Segment 45 Big" style="display:inline">
+    <path style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 20.34,180.31001 181.31,19.35" id="path1835" inkscape:connector-curvature="0"/>
+  </g></svg></g><g id="Arrow_45_Right_Top5"><svg viewBox="0 0 200.71 200.71" label="Arrow 45 Right Top" id="Arrow_45_Right_Top"><title>Arrow 45 Right Top</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="Layer_16_copy_18" data-name="Layer 16 copy 18" style="display:inline" inkscape:label="Arrow 45 Right Top">
+    <g id="g352">
+      <line class="cls-3" x1="190.3" y1="10.47" x2="181.46001" y2="19.309999" id="line346" style="fill:none;stroke:#000000;stroke-width:7px;stroke-linecap:round"/>
+      <line class="cls-3" x1="193.75" y1="21.82" x2="190.3" y2="10.48" id="line348" style="fill:none;stroke:#000000;stroke-width:7px;stroke-linecap:round"/>
+      <line class="cls-3" x1="190.3" y1="10.49" x2="178.96001" y2="7.04" id="line350" style="fill:none;stroke:#000000;stroke-width:7px;stroke-linecap:round"/>
+    </g>
+  </g></svg></g><g id="Football6" transform="translate(0, -15) translate(0, -15) translate(0, -15) translate(0, -15) translate(-15) translate(-15) translate(-15) translate(-15) translate(-15) translate(0, -15)"><svg viewBox="0 0 200.71 200.71" label="Football" id="Football"><title>Football</title><g inkscape:groupmode="layer" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="Layer_80_copy_2" data-name="Layer 80 copy 2" style="display:inline" inkscape:label="Football">
+    <g id="g756" transform="translate(-0.125,-44.375)">
+      <rect class="cls-4" x="86.480003" y="118.23" width="28" height="53" id="rect744" style="fill:none;stroke:#000000;stroke-width:7px;stroke-linecap:round;stroke-linejoin:round"/>
+      <circle class="cls-6" cx="100.48" cy="144.73" r="5.5799999" id="circle746" style="fill:none;stroke:#000000;stroke-width:3px;stroke-linecap:round"/>
+      <rect class="cls-7" x="95.379997" y="161.98" width="10.37" height="9.25" id="rect748" style="fill:none;stroke:#000000;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round"/>
+      <line class="cls-6" x1="94.900002" y1="144.73" x2="86.599998" y2="144.73" id="line750" style="fill:none;stroke:#000000;stroke-width:3px;stroke-linecap:round"/>
+      <line class="cls-6" x1="106.06" y1="144.73" x2="114.35" y2="144.73" id="line752" style="fill:none;stroke:#000000;stroke-width:3px;stroke-linecap:round"/>
+      <rect class="cls-7" x="95.260002" y="118.23" width="10.37" height="9.25" id="rect754" style="fill:none;stroke:#000000;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round"/>
+    </g>
+  </g></svg></g></svg>

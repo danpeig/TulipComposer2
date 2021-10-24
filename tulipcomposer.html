@@ -1,0 +1,295 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Tulip Composer 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Generate Tulip Icons Online">
+	<meta name="author" content="Daniel Brooke Peig">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/classic.min.css" />
+	<!-- Last minute CSS style corrections-->
+	<style>
+		body {
+			background-color: #FAFAFA;
+		}
+
+		.database {
+			background-color: white;
+			width: 100%;
+			overflow-x: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+		}
+
+		.drawingBox {
+			overflow: auto;
+		}
+
+		.database svg {
+			margin: 2px;
+			border: 1px solid #ced4da;
+			border-radius: 0.25rem;
+			height: 75px;
+			display: inline-block;
+		}
+
+		.SVGCanvas {
+			border: 1px solid #ced4da;
+			background-color: #F3F3F3;
+			border-width: 1px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		object {
+			visibility: hidden;
+			width: 1px;
+			height: 1px;
+		}
+
+		.pickr {
+			display: inline-block;
+		}
+
+		select {
+			height: 100% !important;
+		}
+
+		input[type="number"] {
+			width: 100px !important;
+		}
+
+		]
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<div class="row mt-2">
+					<div class="col-sm-2"><a href="https://www.danbp.org/tulipcomposer"><img
+								src="images/tulip-composer-logo.svg" style="height: 120px;" alt="Tulip Composer"></a>
+					</div>
+					<div class="col-sm-8">
+						<h1><strong>Tulip Composer</strong></h1>
+						<strong>Version 2.0</strong><br>
+						<a href="https://www.danbp.org/tulipcomposer">danbp.org/tulipcomposer</a>
+					</div>
+					<div class="col-sm-2"><a href="https://www.danbp.org>"><img
+								src="images/danielbp_logo2016_200x80.png" style="height: 50px; float: right;"></a></div>
+				</div>
+				<p>
+					<h5>Tips</h5>
+					<UL>
+						<LI>Pick the size before creating a new tulip.</LI>
+						<LI>Don't worry too much about the size. The vector SVG file can be resized afterwards without
+							losing quality.</LI>
+						<LI>The default background is transparent. You can add a solid one from the decorations library.
+						</LI>
+					</UL>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-5 mt-3">
+				<h3>Canvas</h3>
+				<div class="row mt-3">
+					<div class="col-sm-12">
+						<form class="form-inline">
+							<label for="canvasSize" class="mr-2">Size (px)</label>
+							<input type="number" name="canvasSize" id="canvasSize" min="50" max="2000"
+								title="Size of the new canvas. Since the files will be exported as vectorial SVG you can resize later without any quality loss."
+								class="form-control my-1 mr-1">
+							<button type="button" id="resetCanvas" class="btn btn-primary mr-2" title="New canvas"><i
+									class="fas fa-file"></i> New</button>
+						</form>
+						<div class="drawingBox">
+							<svg id="SVGCanvas" class="SVGCanvas">
+								<!-- Our images will be rendered here!-->
+							</svg>
+						</div>
+						<button type="button" id="exportSVG" class="btn btn-primary" title="Export SVG drawing"><i
+								class="fas fa-save"></i> Export</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 mt-3">
+				<h3>Transform</h3>
+				<div class="row mt-3">
+					<div class="col-sm-12">
+						<table>
+							<tr>
+								<td>&nbsp;</td>
+								<td><button type="button" id="moveUp" class="btn btn-primary" title="Move up"><i
+											class="fas fa-arrow-up"></i></button></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td><button type="button" id="moveLeft" class="btn btn-primary" title="Move left"><i
+											class="fas fa-arrow-left"></i></button></td>
+								<td>&nbsp;</td>
+								<td><button type="button" id="moveRight" class="btn btn-primary" title="Move right"><i
+											class="fas fa-arrow-right"></i></button></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td><button type="button" id="moveDown" class="btn btn-primary" title="Move down"><i
+											class="fas fa-arrow-down"></i></button></td>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>
+									<div class="btn-group">
+										<button type="button" id="rotateLeft" class="btn btn-primary">
+											<i class="fas fa-sync-alt fa-flip-horizontal"
+												title="Rotate 90° left"></i></button>
+										<button type="button" id="rotateRight" class="btn btn-primary"
+											title="Rotate 90° right"><i class="fas fa-sync-alt"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-group">
+										<button type="button" id="scaleUp" class="btn btn-primary" title="Scale up"><i
+												class="fas fa-arrows-alt"></i></button>
+										<button type="button" id="scaleDown" class="btn btn-primary"
+											title="Scale down"><i class="fas fa-compress-arrows-alt"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-group">
+										<button type="button" id="flipHorizontal" class="btn btn-primary"
+											title="Horizontal flip"><i class="fas fa-exchange-alt"></i></button>
+										<button type="button" id="flipVertical" class="btn btn-primary"
+											title="Vertical flip"><i
+												class="fas fa-exchange-alt fa-rotate-90"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button type="button" id="resetLayer" class="btn btn-primary btn-block"
+										title="Reset transformations"><i class="fas fa-eraser"></i></button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5 mt-3">
+				<h3>Layers</h3>
+				<div class="row mt-3">
+					<div class="col-sm-12">
+						<select id="layers" multiple class="form-control" title="Tulip layers"></select>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-sm-12">
+						<div class="btn-group">
+							<button type="button" id="deleteLayer" class="btn btn-primary" title="Delete layer"><i
+									class="fas fa-trash"></i></button>
+							<button type="button" id="sendBack" class="btn btn-primary" title="Send to back"><i
+									class="fas fa-angle-double-up"></i></button>
+							<button type="button" id="sendBackward" class="btn btn-primary" title="Send backward"><i
+									class="fas fa-angle-up"></i></button>
+							<button type="button" id="bringForward" class="btn btn-primary" title="Bring forward"><i
+									class="fas fa-angle-down"></i></button>
+							<button type="button" id="bringFront" class="btn btn-primary" title="Bring to front"><i
+									class="fas fa-angle-double-down"></i></button>
+						</div>
+						<label for="colorPicker" class="control-label mt-1">Color</label>
+						<span class="color-picker" title="Select the color for the layer"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>Text</h3>
+				<form class="form-inline">
+					<label for="textInput" class="my-1 mr-2">Text</label>
+					<input type="text" id="textInput" class="form-control my-1 mr-4" title="Enter the desired text">
+					<label for="textSize" class="my-1 mr-2">Size (%)</label>
+					<input type="number" id="textSize" value="20" max="100" min="5" class="form-control my-1 mr-2"
+						title="Initial text size">
+					<button type="button" id="addText" class="btn btn-primary"><i class="fas fa-plus"
+							title="Add text"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>Tracks</h3>
+				<div id="collectionTracks" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>From</h3>
+				<div id="collectionFrom" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>To</h3>
+				<div id="collectionTo" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>Decoration</h3>
+				<div id="collectionDecoration" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>Obstacles</h3>
+				<div id="collectionObstacles" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>Objects</h3>
+				<div id="collectionObjects" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<h3>IcoMoon <a href="https://icomoon.io/"><i class="fas fa-link"></i></a></h3>
+				<div id="collectionIcoMoon" class="database"></div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<small><a href="https://www.danbp.org/tulipcomposer">Tulip Composer</a> is developed and maintained by
+					<a href="https://www.danbp.org">Daniel Brooke Peig</a> and is distributed under the <a
+						href="LICENSE.txt">GNU/GPL</a> license. The generated tulips are licensed under the <a
+						href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+						International License</a>.</small>
+			</div>
+		</div>
+	</div>
+	<!-- Libraries are loaded here!-->
+	<object type="image/svg+xml" data="images/Tracks.svg" id="Tracks"></object>
+	<object type="image/svg+xml" data="images/Decoration.svg" id="Decoration"></object>
+	<object type="image/svg+xml" data="images/From.svg" id="From"></object>
+	<object type="image/svg+xml" data="images/To.svg" id="To"></object>
+	<object type="image/svg+xml" data="images/Obstacles.svg" id="Obstacles"></object>
+	<object type="image/svg+xml" data="images/Objects.svg" id="Objects"></object>
+	<object type="image/svg+xml" data="images/IcoMoon.svg" id="IcoMoon"></object>
+	<!-- ... and the scripts, here!-->
+	<script src="js/pickr.min.js"></script>
+	<script src="js/tulipcomposer.js"></script>
+</body>
+
+</html>
