@@ -39,7 +39,7 @@ Tulip Composer is distributed for free under the GNU/GPL License Version 3. The 
 
 ## Credits
 
-Tulip Composer was created in 2005 and then rewritten in 2019 by [Daniel Brooke Peig](https:/www.danbp.org).
+Tulip Composer was created in 2005 and then rewritten in 2019 by [Daniel BP](https:/www.danbp.org).
 
 ## Third party components
 
